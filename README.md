@@ -1,7 +1,13 @@
 # pokedex-challenge
-Pokédex Challenge 
+Pokédex Challenge - Potência Tech Angular Developer - Powered by iFood (DIO)
 
 Technologies: 
-HTML
-CSS
-JavaScript
+<ul>
+  <li>HTML</li>
+  <li>CSS</li>
+  <li>JavaScript</li>
+</ul>
+
+
+
+
