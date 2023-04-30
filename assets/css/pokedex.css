@@ -162,20 +162,6 @@
     z-index: 1;
 }
 
-/* .closeBtn{
-    
-    padding: .55rem .5rem;
-    margin: .25rem 0;
-    font-size: .625rem;
-    color: #fff;
-    //background-color: #6c79db; 
-    border: none;
-    border-radius: 1rem;
-    cursor: pointer;
-    align-self: flex-end;
-    width: 10vh;
-} */
-
 .closeBtn{
     padding: .55rem .5rem;
     margin: .25rem 0;
@@ -185,13 +171,7 @@
     border-radius: 1rem; 
     cursor: pointer;
     align-self: flex-end;
-    /* width: 10vh; */
 }
-
-/* .closeBtn:hover{
-    transform: translateY(-2px);
-    box-shadow: 1px 2px 1px 0 rgb(138, 135, 135);
-} */
 
 #detailPokemon{
     border-radius: 8px;
@@ -199,16 +179,14 @@
 
 #img-pokemon{
     margin-left:80px;
-    width: 100px; 
+    width: 130px; 
 }
 
 #data{
     background-color: white;
-    /* height: 19rem; */
+    height: 12.5rem;
     width: auto;
-    border-radius:8px 8px 8px 8px;
-    /* box-shadow: 0 -15px 24px -8px #5c5b59; */
-   
+    border-radius:8px 8px 8px 8px; 
 }
 
 #data h4{
@@ -218,63 +196,7 @@
 #data p{
     font-size: 10px;
     margin-left: 5px;
-}
-
-#stats{
-    display: flex;
-    font-size: 0.8rem;
-    width: 80%;
-}
-
-.stat-bar{
-    display: flex;
-    justify-content: space-between;
-    width: 80%;
-    margin: 0 0 0 60px;
-}
-
-.stat-bar p{
-    border-radius: 5px;
-    padding: 0.6rem;
-    box-shadow: 2px 1px 5px 1px #5c5b59;
-}
-
-#hability{
-    display: flex;
-    width: 100%;
-    font-size: 0.8rem;
-    margin: 0 0 0 80px;   
-}
-
-.stat-desc{
-    color: rgb(24, 26, 24);
-    font-weight: bold;
-    text-align: right;
-    border-right: 1px solid black;
-    padding-right: 0.6rem;
-    text-transform: uppercase;
-    
-    
-    
-}
-
-.stat-desc p{
-      border-radius: 5px;
- 
-}
-
-.bar-inner{
-    
-    border-radius: 4px;
-    padding-left: 0.6rem;
-    
-}
-
-.bar-inner p{
-     
-    padding-left: 1rem;
-    border-radius: 5px;
-    
+    text-transform: capitalize;
 }
 
 .pokemonDetail {
@@ -287,11 +209,6 @@
     cursor: pointer;
     max-width: 100%;
 }
-
-.abilities {
-    display: inline;
-    font-size: 10px
-};
 
 @media screen and (min-width: 380px){
     .pokemons {

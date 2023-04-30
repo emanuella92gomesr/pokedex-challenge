@@ -54,24 +54,25 @@ const displayPopup = (pokemon) =>{
    
         <div id="popup">
         <div id="detailPokemon">
-                <li class="pokemonDetail ${pokemon.type}">
-                <button class="closeBtn ${type}" id="closeBtn" onClick="closePopup()">X</button>
-                <span class="name">${pokemon.name}</span>
-                <span class="number">#${pokemon.id.toString().padStart(3,"0")}</span>
+            <li class="pokemonDetail ${pokemon.type}">
+            <button class="closeBtn ${type}" id="closeBtn" onClick="closePopup()">X</button>
+            <span class="name">${pokemon.name}</span>
+            <span class="number">#${pokemon.id.toString().padStart(3,"0")}</span>
 
-                <div class="detail">
-                    <ol class="types">
-                        ${pokemon.types.map((type) =>`<li class="type ${type}">${type}</li>`).join('')}
-                    </ol>
-                </div>
-                    <img id="img-pokemon" src="${photo}"alt="${pokemon.name}">
-                <div id="data">
-                    <p>Abilities: ${pokemon.abilities.map((ability) => `${ability}`).join()} </p>
-                    <p>Height: ${(pokemon.height/10).toFixed(2)} m</p>
-                    <p>Weight: ${((pokemon.height)/10).toFixed(2)} kg</p>
-                </div>
+            <div class="detail">
+                <ol class="types">
+                    ${pokemon.types.map((type) =>`<li class="type ${type}">${type}</li>`).join('')}
+                </ol>
             </div>
+            <img id="img-pokemon" src="${photo}"alt="${pokemon.name}">
+            <div id="data">
+                <p>Abilities: ${pokemon.abilities.map((ability) => `${ability}`).join()} </p>
+                <p>Height: ${(pokemon.height/10).toFixed(2)} m</p>
+                <p>Weight: ${((pokemon.height)/10).toFixed(2)} kg</p>
+                ${pokemon.stats.map((stat) => `<p>${stat.stat.name}: ${stat.base_stat} </p>`).join('')}
             </div>
+        </div>
+        </div>
         </li>
     `
    
@@ -81,14 +82,14 @@ const displayPopup = (pokemon) =>{
 const closePopup = () =>{
     const popup = document.getElementById('popup')
     popup.parentElement.removeChild(popup)
-}
+};
 
 function loadPokemonItens(offset, limit) {
     pokeApi.getPokemons(offset, limit).then((pokemons = []) => {
         const newHtml = pokemons.map(convertPokemonToLi).join('')
         pokemonList.innerHTML += newHtml
     })
-}
+};
 
 loadPokemonItens(offset, limit)
 
