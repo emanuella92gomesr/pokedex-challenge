@@ -8,6 +8,7 @@ Technologies:
   <li>JavaScript</li>
 </ul>
 
+Deploy: <a href="https://emanuella92gomesr.github.io/pokedex-challenge/">Pokédex Challenge</a>
 
 
 
